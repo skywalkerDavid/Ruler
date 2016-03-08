@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_ruler"
+    tools:context="com.skywalker.ruler.RulerActivityFragment"
+    android:id="@+id/parent_panel">
+
+  <com.skywalker.ruler.view.InchView
+      android:id="@+id/ruler_view"
+      android:layout_width="@dimen/ruler_width"
+      android:layout_height="match_parent"/>
+
+  <com.skywalker.ruler.view.HandleView
+      android:id="@+id/handle_view_1"
+      android:layout_width="@dimen/handle_width"
+      android:layout_height="@dimen/handle_height"
+      android:layout_alignParentStart="true"
+      android:background="@mipmap/handle"
+      android:visibility="gone"/>
+
+  <com.skywalker.ruler.view.HandleView
+      android:id="@+id/handle_view_2"
+      android:layout_width="@dimen/handle_width"
+      android:layout_height="@dimen/handle_height"
+      android:layout_alignParentStart="true"
+      android:background="@mipmap/handle"
+      android:visibility="gone"/>
+
+  <TextView
+      android:id="@+id/ruler_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="@string/handle_tip"
+      android:singleLine="true"
+      android:rotation="270"/>
+
+</RelativeLayout>
